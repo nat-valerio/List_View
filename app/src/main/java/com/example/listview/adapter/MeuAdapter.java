@@ -40,11 +40,21 @@ public class MeuAdapter extends ArrayAdapter<Tarefa> {
         }
 
         Tarefa tarefaAtual = tarefas.get(position);
+
         TextView nome = listItem.findViewById(R.id.text_view_tarefa_nome);
         nome.setText(tarefaAtual.getNome());
 
-        TextView status = listItem.findViewById(R.id.text_view_status);
-        status.setText(tarefaAtual.getStatus().toString());
+
+
+        if (tarefaAtual.getStatus()){
+            TextView status = listItem.findViewById(R.id.text_view_status);
+            status.setText("");
+        }
+
+        else{
+            TextView status = listItem.findViewById(R.id.text_view_status);
+            status.setText("Concluir");
+        }
 
 
         return listItem;

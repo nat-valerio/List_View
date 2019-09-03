@@ -5,11 +5,13 @@ public class Tarefa {
     private String id;
     private String nome;
     private Boolean status;
+    private String descricao;
 
-    public Tarefa(String id, String nome, Boolean status) {
+    public Tarefa(String id, String nome, Boolean status, String descricao) {
         this.id = id;
         this.nome = nome;
         this.status = status;
+        this.descricao = descricao;
     }
 
     public String getId() {
@@ -35,4 +37,14 @@ public class Tarefa {
     public void setStatus(Boolean status) {
         this.status = status;
     }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 }
+
+
